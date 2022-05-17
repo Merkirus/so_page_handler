@@ -10,8 +10,11 @@ public:
 	~Strona()=default;
 	int getNumerStrony() const;
 	void setNumerStrony();
-private:
-	unsigned numer_strony;
+	void mightDone();
+	bool isDone() const;
+protected:
+	int numer_strony;
+	bool wykonana;
 	static unsigned count;
 };
 

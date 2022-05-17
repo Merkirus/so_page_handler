@@ -8,11 +8,22 @@ class Proces
 {
 public:
 	Proces();
-	~Proces();
+	~Proces()=default;
 	void generatePages(int n);
 	void generatePages();
+	void generateSeq(int n);
+	void generateSeq();
+	void giveSeq(std::vector<unsigned> v);
+	unsigned getLastSeqElem();
+	Strona getLastSeqPage();
+	void delLastSeqElem();
+	bool ownPage(Strona strona);
+	std::vector<unsigned> getSeq();
+	std::vector<unsigned> getPastSeq();
 private:
-	std::vector<Strona> odwolania;	
+	std::vector<unsigned> sequence;
+	std::vector<Strona> strony;
+	std::vector<unsigned> past_sequence;
 };
 
 #endif /*PROCES_H*/

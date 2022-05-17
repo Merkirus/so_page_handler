@@ -1,18 +1,18 @@
-#ifndef FIFO_H
-#define FIFO_H
+#ifndef ALRU_H
+#define ALRU_H
 
 #include "Pamiec.h"
 #include "Proces.h"
 
-class FIFO
+class ALRU
 {
 public:
-	FIFO(Pamiec pamiec, Proces proces);
-	~FIFO() = default;
+	ALRU(Pamiec pamiec, Proces proces);
+	~ALRU()=default;
 	void run(int n);
 private:
 	Pamiec pamiec;
 	Proces proces;
 };
 
-#endif /*FIFO_H*/
+#endif
