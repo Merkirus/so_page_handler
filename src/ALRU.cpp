@@ -11,8 +11,7 @@ void ALRU::run(int n)
 	for (int i=0; i < n; ++i)
 	{
 		if (!pamiec.isFull()) {
-			++bledy;
-			pamiec.dodajStroneDoPustejRamkiMemoVer(proces);
+			pamiec.dodajStroneDoPustejRamkiMemoVer(proces, bledy);
 			continue;
 		}
 

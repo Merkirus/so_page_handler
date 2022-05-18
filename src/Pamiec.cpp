@@ -30,7 +30,7 @@ bool Pamiec::isFull() const
 	return result;
 }
 
-void Pamiec::dodajStroneDoPustejRamki(Proces& proces)
+void Pamiec::dodajStroneDoPustejRamki(Proces& proces, int& bledy)
 {
 	for (int i=0; i < ramki.size(); ++i)
 	{
@@ -44,13 +44,14 @@ void Pamiec::dodajStroneDoPustejRamki(Proces& proces)
 				}
 			}
 			if (escape) break;
+			++bledy;
 			ramki.at(i).setStrona(nextPage);
 			break;		
 		}
 	}
 }
 
-void Pamiec::dodajStroneDoPustejRamkiMemoVer(Proces& proces)
+void Pamiec::dodajStroneDoPustejRamkiMemoVer(Proces& proces, int& bledy)
 {
 	for (int i=0; i < ramki.size(); ++i)
 	{
@@ -64,6 +65,7 @@ void Pamiec::dodajStroneDoPustejRamkiMemoVer(Proces& proces)
 				}
 			}
 			if (escape) break;
+			++bledy;
 			updateMemo(nextPage);
 			ramki.at(i).setStrona(nextPage);
 			break;		

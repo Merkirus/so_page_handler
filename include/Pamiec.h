@@ -19,8 +19,8 @@ public:
 	std::vector<Ramka> getRamki();
 	bool isAlreadyInFrame(Strona strona) const;
 	bool isFull() const;
-	void dodajStroneDoPustejRamki(Proces& proces);
-	void dodajStroneDoPustejRamkiMemoVer(Proces& proces);
+	void dodajStroneDoPustejRamki(Proces& proces, int& bledy);
+	void dodajStroneDoPustejRamkiMemoVer(Proces& proces, int& bledy);
 	void setStronaAt(int n, Strona& strona);
 	/*Do algorytmu drugiej szansy*/
 	std::vector<SecondChance> getMemo();
